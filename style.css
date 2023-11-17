@@ -1,0 +1,115 @@
+html,
+body {
+	background-color: darkgray;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	color: green;
+	text-align: center;
+}
+
+table {
+	border: 2px black solid;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+table *:not(caption) {
+	border: black 1px solid;
+}
+
+table caption {
+	font-variant: small-caps;
+	font-size: x-large;
+}
+
+th {
+	font-weight: bold;
+}
+
+p,
+li {
+	text-align: center;
+	margin: 0 auto;
+	list-style-position: inside;
+}
+
+#head {
+	display: grid;
+	grid-template-columns: repeat(3, 20%);
+	grid-template-areas:
+		"tit tit tit"
+		"auto auto auto";
+	width: 100%;
+	justify-content: center;
+	padding: 0.5em 0;
+	margin: 0;
+	background-color: black;
+}
+
+#head h1 {
+	grid-area: tit;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+	color: azure;
+}
+
+#head input {
+	grid-row: btns;
+	box-sizing: content-box;
+	border: none;
+	background-color: azure;
+	color: darkslategray;
+}
+
+#head input:first-of-type {
+	border-radius: 10px 0 0 10px;
+}
+
+#head input:last-of-type {
+	border-radius: 0 10px 10px 0;
+}
+
+form:not(#head) {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+form:not(#head) h1 {
+	font-size: large;
+}
+
+hr {
+	margin: 0.5em auto;
+	width: 50% !important;
+	border: none;
+	border-top: 0.2em darkslategray dashed;
+}
+
+form:not(#head) input[type="submit"] {
+	background-color: cornflowerblue !important;
+}
+
+form:not(#head) input:not([type="checkbox"]) {
+	border: none;
+	box-sizing: content-box;
+	width: 20%;
+	height: 10%;
+	border-radius: 20px;
+	background-color: azure;
+	text-align: center;
+	padding: auto;
+}
